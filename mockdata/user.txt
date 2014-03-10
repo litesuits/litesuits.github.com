@@ -1,0 +1,1 @@
+{"api":"com.xx.get.userinfo","v":"1.0","result":{"code":200,"message":"success"},"data":{"age":18,"name":"qingtianzhu","girl_friends":["xiaoli","fengjie","lucy"]}}
