@@ -35,8 +35,9 @@ LiteHttp是一款简单、智能、灵活的HTTP框架库，它在请求和响�
 ---
 ###基础请求
 ```java
-LiteHttpClient client = ApacheHttpClient.getInstance(context);
-Response res = client.execute(new Request("http://a.com"));
+LiteHttpClient client = LiteHttpClient.getInstance(context);
+Response res = client.execute(new Request("http://baidu.com"));
+String html = res.getString();
 ```
 ###异步请求
 ```java
@@ -74,14 +75,51 @@ public class Man implements HttpParam{
 ###全自动Json转化
 ```java
 String url = "http://litesuits.github.io/mockdata/user?id=18";
-Man man = client.get(url, null, Man.class);
+User user = client.get(url, null, User.class);
 ```
-man json:
+User Class :
+```java
+public class User extends ApiResult {
+	//全部声明public是因为写sample方便，不过这样性能也好，
+	//即使private变量LiteHttp也能自动赋值，开发者可自行斟酌修饰符。
+	public UserInfo data;
+
+	public static class UserInfo {
+		public String name;
+		public int age;
+		public ArrayList<String> girl_friends;
+	}
+}
+
+public abstract class ApiResult {
+	public String api;
+	public String v;
+	public Result result;
+
+	public static class Result {
+		public int code;
+		public String message;
+	}
+}
+```
+User json structure:
 ```json
 {
-    "name": "jame",
-    "age": 26,
-    "id": 18
+	"api": "com.xx.get.userinfo",
+	"v": "1.0",
+	"result": {
+		"code": 200,
+		"message": "success"
+	},
+	"data": {
+		"age": 18,
+		"name": "qingtianzhu",
+		"girl_friends": [
+			"xiaoli",
+			"fengjie",
+			"lucy"
+		]
+	}
 }
 ```
 ###多文件上传
@@ -90,7 +128,6 @@ man json:
 	FileInputStream fis = new FileInputStream(new File("sdcard/1.jpg"));
 	Request req = new Request(url);
 	req.setMethod(HttpMethod.Post)
-		.setParamModel(new BaiDuSearch())
 		.addParam("lite", new File("sdcard/lite.jpg"), "image/jpeg")
 		.addParam("feiq", new File("sdcard/feiq.exe"), "application/octet-stream");
 	if (fis != null) req.addParam("meinv", fis, "sm.jpg", "image/jpeg");
