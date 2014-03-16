@@ -19,13 +19,12 @@
 </head>
 
 <body class="theme">
-
 <div id="editor-reader-full" class="editor-reader-full-shown" style="position: static;">
     <div id="reader-full-topInfo" class="reader-full-topInfo-shown">
         <span>
             <code>@litesuits</code>
         </span>
-        <code><span id="article-updated-date">2014-03-16 14:06</span></code>
+        <code><span id="article-updated-date">2014-03-16 14:35</span></code>
     </div>
     <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><h1 id="litehttp一款智能的http框架类库">LiteHttp：一款‘智能’的HTTP框架类库</h1>
 
@@ -38,6 +37,7 @@
 <ul>
 <li><strong>单线程</strong>，所有方法都基于一个线程，绝不会跨线程，多线程的事情交给它自带的AsyncExecutor 或者<a href="https://github.com/litesuits/android-lite-async" target="_blank">更专业的框架库</a>来解决。</li>
 <li><strong>灵活的架构</strong>，你可以轻松的替换Json自动化库、参数构建方式甚至默认的apache http client连接方式。</li>
+<li><strong>轻量级</strong>，微小的的开销，core jar包仅约86kb。</li>
 <li>多种请求类型全面支持：<strong>get, post, head, put, delete, trace, options, patch.</strong></li>
 <li><strong>多文件上传</strong>，不需要额外的类库支持。</li>
 <li>内置的Dataparser支持<strong>文件和位图下载</strong>，你也可以自由的扩展DataParser来把原始的http inputstream转化为你想要的东西。</li>
@@ -47,19 +47,21 @@
 <li>通过网络探测完成<strong>智能重试</strong> ，对复杂的、信号不良的的移动网络做特殊的优化。</li>
 <li><strong>禁用一种或多种网络</strong>, 比如2G，3G。</li>
 <li>简明且统一的<strong>异常处理</strong>体系：清晰、准确的抛出客户端、网络、服务器三种异常。</li>
-<li>内置的AsyncExecutor可以让你轻松实现<strong>异步和并发</strong>的http请求，如果你喜欢，随意使用你自己的AsyncTask或Thread来完成异步，推荐使用<a href="https://github.com/litesuits/android-lite-async" target="_blank">更强大、高效的专业并发库</a>。</li>
+<li>内置的<strong>AsyncExecutor</strong>可以让你轻松实现<strong>异步和并发</strong>的http请求，如果你喜欢，随意使用你自己的AsyncTask或Thread来完成异步，推荐使用<a href="https://github.com/litesuits/android-lite-async" target="_blank">更强大、高效的专业并发库</a>。</li>
 </ul>
 
 <h2 id="架构图">架构图</h2>
 
 <h3 id="一个良好的项目结构">一个良好的项目结构：</h3>
 
-<p><img src="http://litesuits.github.io/guide/img/app_archi.png" alt="App Architecture" title=""> <br>
-- 底层是业务无关的框架库，用之四海而皆准。 <br>
-- 中层是针对业务的三方库，以及主要逻辑实现，全部业务都在这里。 <br>
-- 上层是Activity、Fragment、Views&amp;Widget等视图渲染和业务调用。 <br>
-这样一个结构，使得你的代码快速在phone和pad以及tv之间迁移，且让你整个更为清晰。 <br>
-那么LiteHttp就位于这个结构的底层。</p>
+<p><img src="http://litesuits.github.io/guide/img/app_archi.png" alt="App Architecture" title=""></p>
+
+<ul>
+<li>底层是业务无关的框架库，用之四海而皆准。</li>
+<li>中层是针对业务的三方库，以及主要逻辑实现，全部业务都在这里。</li>
+<li>上层是Activity、Fragment、Views&amp;Widget等视图渲染和业务调用。 <br>
+这样一个结构，使得你的代码快速在phone和pad以及tv之间迁移，且让你整个更为清晰。那么LiteHttp就位于这个结构的底层。</li>
+</ul>
 
 <h3 id="litehttp结构模型">LiteHttp结构模型：</h3>
 
@@ -99,7 +101,7 @@
 
 <pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code class="language-java"><span class="com">// one way</span></code></li><li class="L1"><code class="language-java"><span class="typ">File</span><span class="pln"> file </span><span class="pun">=</span><span class="pln"> client</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="pln">imageUrl</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileParser</span><span class="pun">(</span><span class="str">"sdcard/lite.jpg"</span><span class="pun">),</span><span class="pln"> </span><span class="typ">HttpMethod</span><span class="pun">.</span><span class="typ">Get</span><span class="pun">);</span></code></li><li class="L2"><code class="language-java"><span class="com">// other way</span></code></li><li class="L3"><code class="language-java"><span class="typ">Response</span><span class="pln"> res </span><span class="pun">=</span><span class="pln"> client</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Request</span><span class="pun">(</span><span class="pln">imageUrl</span><span class="pun">).</span><span class="pln">setDataParser</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BitmapParser</span><span class="pun">()));</span></code></li><li class="L4"><code class="language-java"><span class="typ">Bitmap</span><span class="pln"> bitmap </span><span class="pun">=</span><span class="pln"> res</span><span class="pun">.</span><span class="pln">getBitmap</span><span class="pun">();</span></code></li></ol></pre>
 
-<h3 id="收藏并克隆litehttpstart-and-clone-litehttp-github-仓库吧并且可以看到更多的使用案列方便你进阶">收藏并克隆LiteHttpStart and Clone <a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp Github</a> 仓库吧，并且可以看到更多的使用案列，方便你进阶。</h3>
+<h3 id="收藏并克隆litehttp-github-仓库吧并且可以看到更多的使用案列方便你进阶">收藏并克隆<a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp Github</a> 仓库吧，并且可以看到更多的使用案列，方便你进阶。</h3>
 
 <h2 id="qq-交流群-47357508">QQ 交流群： 47357508</h2></div>
 </div>
