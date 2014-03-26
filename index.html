@@ -76,6 +76,23 @@ body {
 	margin-top:10px;
 	text-align: center;
 }
+a {
+	color: #0b758f;
+	text-decoration:none;
+	
+}
+a:hover {
+	color: #f94b42;
+	text-decoration:none;
+	border-bottom:#f94b42 dashed 1px;
+}
+.code_name{
+	font-size: 15px;
+	color: #999;
+	margin-top: 10px;
+	margin-left: 40px;
+	line-height: 1.5;
+}
 </style>
 </head>
 
@@ -85,23 +102,54 @@ body {
     <span id="nav_title">LiteSuits</span> <span id="nav_name">by MaTianyu</span>
   </center>
 </div>
+
 <div id="main">
+ <!-- project list -->
   <div class="title_h1">Project List</div>
   <div class="divide_line"></div>
-  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp</a></div>
+  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp</a>
+  <span class="code_name"></span>
+  </div>
+  <div class="code_name">Code-Name: Arrow</div>
   <div class="content">A simple, intelligent and flexible HTTP client for Android. With LiteHttp you can make HTTP request with only one line of code! It supports GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS and PATCH request types. LiteHttp could convert a java model to the parameter of http request and rander the response JSON as a java model intelligently. And you can extend the abstract class DataParser to parse inputstream to which you want. </div>
+  
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-async" target="_blank">LiteAsync</a></div>
+  <div class="code_name">Code-Name: Crossbow</div>
   <div class="content">An ameliorative, enhanced AsyncTask for Android. LiteAsync also provides SimpleTask, SafeTask and CachedTask for rapid development. More convenient is, it has a TaskExecutor which can executes ordered, cyclicbarrier, delayed and timer Task.</div>
-  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-orm" target="_blank">LiteOrm</a>(on the way)</div>
+ 
+  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-orm" target="_blank">LiteOrm</a></div>
+  <div class="code_name">Code-Name: Archiver</div>
   <div class="content">LiteOrm is a fast, small, powerful ORM framework for Android. LiteOrm makes you do CRUD operarions on SQLite database and keep your object relation mapping with a sigle line of code efficiently.</div>
-  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-ioc" target="_blank">LiteIoc</a></div>
-  <div class="content">A write less, do more, dependency injector for Android. LiteIoc makes your code more concise and development simpler by using annotation-based injection.</div>
+  
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-views" target="_blank">Views & Widgets</a></div>
+  <div class="code_name">Code-Name: Goddess</div>
   <div class="content">WavedButton, TouchLock, AnimText, IndexBar, etc.</div>
+  
+  <!-- project ing -->
+  <div class="title_h1">Project ing...</div>
+  <div class="divide_line"></div>
+  
+  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-ioc" target="_blank">LiteIoc</a></div>
+  <div class="code_name">Code-Name: Tidier</div>
+  <div class="content">A write less, do more, dependency injector for Android. LiteIoc makes your code more concise and development simpler by using annotation-based injection.</div>
+  
+  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-bluetooth" target="_blank">LiteBluetooth</a></div>
+  <div class="code_name">Code-Name: Bong</div>
+  <div class="content">LiteBluetooth(Bong) is designed for Buletooth Low Energy, which provides an easier-to-use API. It can help you discover devices, query services, and read/write characteristics quickly and more conveniently. It is well suited for BLE devices that have low power requirements, such as proximity sensors, heart rate monitors, fitness devices, and so on.</div>
+  
+  <div class="title_h2"><a href="https://github.com/litesuits/android-lite-eventbus" target="_blank">LiteEventBus</a></div>
+  <div class="code_name">Code-Name: eBus</div>
+  <!--ebus是一个简单事件总线库，它通过发布/订阅模式简化了应用组件间的通信。它可以在不同模块间传递事件和数据，这就很容易让你做到模块间的解耦。-->
+  <div class="content">ebus is an publish/subscribe based event bus library, which simplifies the communication between app components. It plays a role in passing event data between different parts and thus decouples them.</div>
+  
+  
+ 
+  <!-- about -->
   <div class="title_h1">About Me</div>
   <div class="divide_line"></div>
   <div class="content margin-top">马天宇(MaTianyu), Chinese android engineer based in Hangzhou. I’ve built some open-source projects which you can <a href="https://github.com/litesuits" target="_blank">find on github</a>. My Email: <a href="mailto:litesuits@gmail.com">litesuits@gmail.com</a></div>
 </div>
+
 <div id="foot">
   <div class="divide_line"></div>
    <div class="footer_static"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5844686'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5844686%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
