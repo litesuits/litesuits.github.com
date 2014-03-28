@@ -3,160 +3,84 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LiteSuits</title>
-<style type="text/css">
-body {
-	padding: 0px;
-	margin: 0px;
-	font-family:"Courier New", Courier, monospace;
-}
-/* 整体结构 */
-#head {
-	width: 100%;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #302D2D;
-}
-#main {
-	max-width: 960px;
-	min-height: 500px;
-	margin: auto;
-}
-#foot {
-	margin-top: 50px;
-	width: 100%;
-	height: auto;
-	background-color: #302D2D;
-}
-/* 主副标题 */
-#nav_title {
-	font-size: 40px;
-	color: #FFF;
-}
-#nav_name {
-	font-size: 17px;
-	color: #FFF;
-	padding-left: 5px;
-}
-/* 大标题 */
-.title_h1 {
-	margin-top: 45px;
-	font-size: 25px;
-	color: #000;
-}
-.divide_line {
-	width: 100%;
-	height: 1px;
-	background: #999;
-}
-/* 小标题和内容 */
-.title_h2 {
-	margin-top: 30px;
-	font-size: 19px;
-	margin-left: 20px;
-	color: #302D2D;
-}
-.content {
-	font-size: 19px;
-	color: #000;
-	margin-top: 10px;
-	margin-left: 40px;
-	line-height: 1.5;
-}
-.margin-top {
-	margin-top: 20px;
-}
-.copyright {
-	font-size: 12px;
-	color: #fff;
-	text-align: center;
-	height: 40px;
-	line-height: 40px;
-}
-.footer_static{
-	margin-top:10px;
-	text-align: center;
-}
-a {
-	color: #0b758f;
-	text-decoration:none;
-	
-}
-a:hover {
-	color: #f94b42;
-	text-decoration:none;
-	border-bottom:#f94b42 dashed 1px;
-}
-.code_name{
-	font-size: 15px;
-	color: #999;
-	margin-top: 10px;
-	margin-left: 40px;
-	line-height: 1.5;
-}
-</style>
+<!-- SEO Ultimate -->
+	<meta name="description" content="Lite Android Framework Library" />
+	<meta name="keywords" content="android http, android aysnctask, android sqlite orm,android ioc,android bluetooth,android eventbus,lite http,lite async,lite orm,lite bluetooth,lite ioc,lite event bus," />
+	<meta property="og:type" content="open source web site" />
+	<meta property="og:title" content="Lite Android" />
+	<meta property="og:description" content="litesuits, a aite framework library for android" />
+	<meta property="og:url" content="http://www.litesuits.com" />
+	<meta property="og:site_name" content="litesuits" />
+	<meta name="twitter:card" content="summary" />
+<!-- /SEO Ultimate -->
+<link href="css/index.css" rel="stylesheet" media="screen">
 <link rel="shortcut" href="/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
 <div id="head">
   <center>
-    <span id="nav_title">LiteSuits</span> <span id="nav_name">by MaTianyu</span>
+    <span id="nav_title">Lite Your Android</span> 
+    <span id="nav_subtile" class="whiteklink" >
+    <a href="index-en.html">English</a>
+    </span>
   </center>
 </div>
 
 <div id="main">
  <!-- project list -->
-  <div class="title_h1">Project List</div>
+  <div class="title_h1">我的开源项目</div>
   <div class="divide_line"></div>
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp</a>
   <span class="code_name"></span>
   </div>
-  <div class="code_name">Code-Name: Arrow</div>
-  <div class="content">A simple, intelligent and flexible HTTP client for Android. With LiteHttp you can make HTTP request with only one line of code! It supports get, post, put, delete, head, trace, options and patch request types. LiteHttp could convert a java model to the parameter of http request and rander the response JSON as a java model intelligently. And you can extend the abstract class DataParser to parse inputstream to which you want. </div>
+  <div class="code_name">代号: Arrow</div>
+  <div class="content"> LiteHttp(Arrow)是一款简单、智能、灵活的HTTP框架库，它在请求和响应层面做到了全自动构建和解析，主要用于Android快速开发。借助LiteHttp你只需要一行代码即可完美实现http连接，它全面支持GET, POST, PUT, DELETE, HEAD, TRACE, OPTIONS 和 PATCH八种基本类型。LiteHttp能将Java Model转化为http请求参数，也能将响应的json语句智能转化为Java Model，这种全自动解析策略将节省你大量的构建请求、解析响应的时间。并且，你能自己继承重新实现Dataparser这个抽象类并设置给Request，来将http原始的inputstream转化为任何你想要的东西。</div>
   
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-async" target="_blank">LiteAsync</a></div>
-  <div class="code_name">Code-Name: Crossbow</div>
-  <div class="content">An ameliorative, enhanced AsyncTask for Android. LiteAsync also provides SimpleTask, SafeTask and CachedTask for rapid development. More convenient is, it has a TaskExecutor which can executes ordered, cyclicbarrier, delayed and timer Task.</div>
+  <div class="code_name">代号: Crossbow</div>
+  <div class="content">LiteHttp(Crossbow)是一个专注于异步与并发的简单类库，它提供一个基于andorid系统的改善、增强的AsyncTask，使得它具有真正并发的能力，且能再子线程执行，同时会均衡手机能力来控制线程开销。Crossbow还提供了简单、安全和缓存等异步任务类用于快速开发，更方便的是它有一个任务执行器实现了顺序、关卡、延时、定时任务的执行与调度。</div>
  
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-orm" target="_blank">LiteOrm</a></div>
-  <div class="code_name">Code-Name: Archiver</div>
-  <div class="content">LiteOrm is a fast, small, powerful ORM framework for Android. LiteOrm makes you do CRUD operarions on SQLite database and keep your object relation mapping with a sigle line of code efficiently.</div>
+  <div class="code_name">代号: Archiver</div>
+  <div class="content">LiteOrm(Archiver)是一个速度快、小巧却强大的android ORM框架类库，Archiver让你一行代码实现数据库的增删改查操作，以及实体关系的持久化和自动映射。</div>
   
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-views" target="_blank">Views & Widgets</a></div>
-  <div class="code_name">Code-Name: Goddess</div>
+  <div class="code_name">代号: Goddess</div>
   <div class="content">WavedButton, TouchLock, AnimText, IndexBar, etc.</div>
   
   <!-- project ing -->
-  <div class="title_h1">Project ing...</div>
+  <div class="title_h1">进行中的项目</div>
   <div class="divide_line"></div>
   
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-ioc" target="_blank">LiteIoc</a></div>
-  <div class="code_name">Code-Name: Tidier</div>
-  <div class="content">A write less, do more, dependency injector for Android. LiteIoc makes your code more concise and development simpler by using annotation-based injection.</div>
+  <div class="code_name">代号: Tidier</div>
+  <div class="content">LiteIoc(Tidier)是一个依赖注入类库，它的原则是：用更少的代码，做更多的事情。Tidier会让你的代码更简洁，结构更清晰，从而有更多的时间专注在业务。</div>
   
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-bluetooth" target="_blank">LiteBluetooth</a></div>
-  <div class="code_name">Code-Name: Bong</div>
-  <div class="content">LiteBluetooth(Bong) is designed for Buletooth Low Energy, which provides an easier-to-use API. It can help you discover devices, query services, and read/write characteristics quickly and more conveniently. It is well suited for BLE devices that have low power requirements, such as proximity sensors, heart rate monitors, fitness devices, and so on.</div>
+  <div class="code_name">代号: Bong</div>
+  <div class="content">LiteBluetooth(Bong)是为低功耗蓝牙(BLE)设计的，它有更简单、易用的API，能让你稳定高效的完成蓝牙设备的查询、连接和读写等操作。Bong非常适合和低功耗的蓝牙设备通信，比如传感器，心率检测仪，智能穿戴设备等。</div>
   
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-eventbus" target="_blank">LiteEventBus</a></div>
-  <div class="code_name">Code-Name: eBus</div>
-  <!--ebus是一个简单事件总线库，它通过发布/订阅模式简化了应用组件间的通信。它可以在不同模块间传递事件和数据，这就很容易让你做到模块间的解耦。-->
-  <div class="content">ebus is an publish/subscribe based event bus library, which simplifies the communication between app components. It plays a role in passing event data between different parts and thus decouples them.</div>
+  <div class="code_name">代号: eBus</div>
+  <div class="content">LiteEventBus(eBus)是一个简单事件总线库，它通过发布/订阅模式实现应用的组件间通信。它在不同模块间传递事件和数据，并且解耦了事件的发布和接收者，从而让你做到模块间的解耦。</div>
   
-  
- 
   <!-- about -->
-  <div class="title_h1">About Me</div>
+  <div class="title_h1">关于我</div>
   <div class="divide_line"></div>
-  <div class="content margin-top">马天宇(MaTianyu), Chinese android engineer based in Hangzhou. I’ve built some open-source projects which you can <a href="https://github.com/litesuits" target="_blank">find on github</a>. My Email: <a href="mailto:litesuits@gmail.com">litesuits@gmail.com</a></div>
+  <div class="content margin-top">马天宇，中国杭州，软件工程师。 </div>
+  <div class="content margin-top">我的邮箱: <a href="mailto:mtyccc@gmail.com">mtyccc@gmail.com</a></div>
+  <div class="content margin-top">我的博客：<a href="http://vmatianyu.cn" target="_blank">http://vmatianyu.cn</a></div>
+  <div class="content margin-top">我在github上发布了一系列 <a href="https://github.com/litesuits" target="_blank">开源项目和框架</a>。 </div>
+ 
 </div>
 
 <div id="foot">
   <div class="divide_line"></div>
    <div class="footer_static"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5844686'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5844686%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
    </div>
-    <div class="copyright">
-   简单至极 如你所想
+    <div class="copyright whiteklink" >
+  		<a href="http://bong.cn" target="_blank">简单至极 如你所想</a>
    </div>
 </div>
 </body>
