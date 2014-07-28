@@ -15,6 +15,18 @@
 <!-- /SEO Ultimate -->
 <link href="css/index.css" rel="stylesheet" media="screen">
 <link rel="shortcut" href="/favicon.ico" type="image/x-icon" />
+<script type="text/javascript">
+	function showMyWords(button){
+		var myWords = document.getElementById("myWords");
+		if(myWords.innerHTML == ""){
+			myWords.innerHTML="3年乃至N年后Lite系列仍会坚持专注、简洁、快而稳、小而美的理念。且我认为每个细分的技术领域都应该至少有一款乃至几款小而美的库：百花齐放、百家争鸣。而框架之间、不同功能模块之间应该依赖抽象而非实现，可快速的替换实现(库)，而不是强耦合或大而全(awful)，产品亦是如此，如果你不是平台，不是微信(即便微信也不敢贪多)，其实不应该一锅烩，这一点恰恰是目前国产框架容易题发生的问题（但我们仍需要感激它为开发者提供的便利，去鼓励作者去完善它，做好它）。做框架如做产品，服务她，做好她，需要一些专注。";
+			button.innerHTML="关闭";
+		}else{
+			myWords.innerHTML="";
+			button.innerHTML="点击展开";
+		}
+	}
+</script>
 </head>
 
 <body>
@@ -28,7 +40,14 @@
 </div>
 
 <div id="main">
- <!-- project list -->
+
+  <!-- my words -->
+  <div class="title_h1">一些话</div>
+  <div class="divide_line"></div>
+  <div class="content margin-top">好东西有时恰恰是免费的</div>
+  <div class="content margin-top" >小而美，值得努力，单纯至极才够简洁，简洁至极方如你所想。<span id="myWords"></span><a href="#" onclick="showMyWords(this)" >点击展开</a></div>
+  
+  <!-- project list -->
   <div class="title_h1">我的开源项目</div>
   <div class="divide_line"></div>
   <div class="title_h2"><a href="https://github.com/litesuits/android-lite-http" target="_blank">LiteHttp</a>
