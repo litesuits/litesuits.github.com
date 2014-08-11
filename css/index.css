@@ -11,7 +11,7 @@ body {
 	background-color: #302D2D;
 }
 #main {
-	max-width: 960px;
+	width: 70%;
 	min-height: 500px;
 	margin: auto;
 }
