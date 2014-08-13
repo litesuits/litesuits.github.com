@@ -18,26 +18,23 @@
 <link href="css/index.css" rel="stylesheet" media="screen">
 <link rel="shortcut" href="/favicon.ico" type="image/x-icon" />
 <script type="text/javascript">
-	function showMyWords(button){
-		var myWords = document.getElementById("myWords");
-		if(myWords.innerHTML == ""){
-			myWords.innerHTML="</br></br>"
-			+"1. 轻量级，几乎看不到与核心违背的任何其他功能存在，绝不用担心引入一个大包袱，增加项目负担。</br>"
-			+"2. 性能好，各模块我都尽量去琢磨，必要时方法绕过android的简单API而更贴近底层的实现。</br>"
-			+"3. 依赖抽象，这是面向对象思维的核心，对外提供接口而非实现，开发者可以非常方便的替换、拓展。</br>"
-			+"4. 方法干练，有灵活的API提供各种功能，也有一些直接承担某种特定使命的方法，但不会泛滥。</br>"
-			+"5. 极致简约，不需使用额外工具、多做其他事情来达到更佳体验，一切多余的，都不需要。</br>"
-			+"6. 约定优于配置，这是Lite系列的基线，用极少的描述，做更多的事情。</br></br>"
-			+"Lite系列所追寻的，就是为了还原面向对象应有的体验，让增加的部分，并未增加。</br></br>"
-			+"我认为每个细分的技术领域都应该至少有一款乃至几款小而美的库：百花齐放、百家争鸣。</br></br>"
-			+"框架之间、不同功能模块之间应该依赖抽象而非实现，可快速的替换实现(库)"
-			+"，而不是强耦合或一锅烩(awful)，产品亦是如此，大而全的方向未必更佳，"
-			+"这一点恰恰是目前国产框架容易题发生的问题（但仍需感激它们以及作者辛辛苦苦为开发者提供的便利）。";
-			button.innerHTML="关闭";
-		}else{
-			myWords.innerHTML="";
-			button.innerHTML="点击展开";
-		}
+	function clickCommonts(button){
+	    if(button.id == 'clickCommonts'){
+	        button.style.display= "none";
+	        document.getElementById("comments").style.display= "";
+	    }else{
+            document.getElementById("clickCommonts").style.display= "";
+	        document.getElementById("comments").style.display= "none";
+	    }
+	}
+	function clickMyIdea(button){
+	    if(button.id == 'clickIdea'){
+	        button.style.display= "none";
+	        document.getElementById("myIdea").style.display= "";
+	    }else{
+            document.getElementById("clickIdea").style.display= "";
+	        document.getElementById("myIdea").style.display= "none";
+	    }
 	}
 </script>
 </head>
@@ -59,11 +56,62 @@
   <div class="divide_line"></div>
 
   <div class="content margin-top">简约的背后，往往是复杂</div>
-  <div class="content margin-top" >我希望可以，省去开发者日常工作中大量的繁杂、重复劳动
-      <span id="myWords"></span>
-      <span class="blue" onclick="showMyWords(this)" >点击展开</span>
+
+    <!-- commonts -->
+  <div class="content margin-top" >Lite每个项目仅<span class="bluetext">几十KB</span>，这相当于你项目中一张小图片，非常迷你小巧。
+    <span id="clickCommonts" class="blue" onclick="clickCommonts(this)" >展开用户评论</span>
   </div>
-  
+    <div id="comments" style="display:none">
+        <div class="content margin-top" >
+           &nbsp;&nbsp;<a href="http://www.eoeandroid.com/space-uid-835146.html" target="_blank">stefory：</a>
+            &nbsp;哇塞，太强大了,相见恨晚啊。Lite系列都是精华，怒赞~
+        </div>
+        <div class="content" >
+            &nbsp;&nbsp;<a href="http://www.eoeandroid.com/space-uid-2561246.html" target="_blank">material：</a>
+            做android这么多年，从未用过体积这么小，功能确如此强大的框架，瞬间整个项目清爽了也更清晰了。
+        </div>
+        <div class="content" >
+            &nbsp;&nbsp;<a href="http://www.eoeandroid.com/space-uid-1244719.html" target="_blank">l_y_l：</a>
+            &nbsp;&nbsp;&nbsp;不错的东西，正好符合我的需求，今天发现这个感觉前面都白折腾了。
+        </div>
+        <div class="content" >
+            &nbsp;&nbsp;<a href="http://www.eoeandroid.com/space-uid-509104.html" target="_blank">myheat：</a>
+            &nbsp;&nbsp;强大的中国同胞。
+        </div>
+        <div class="content" >
+            &nbsp;&nbsp;<a href="http://www.eoeandroid.com/space-uid-695695.html" target="_blank">tnj66：</a>
+            &nbsp;&nbsp;&nbsp;支持，世界有你更精彩，绝对。<span class="orange" onclick="clickCommonts(this)" >收起评论</span>
+        </div>
+    </div>
+
+  <!-- idea -->
+  <div class="content margin-top" >Lite追寻的是还原面向对象应有的体验，让应付繁多业务增加的工作量，并未增加。
+      <span id="clickIdea" class="blue" onclick="clickMyIdea(this)" >展开设计理念</span>
+  </div>
+    <div id="myIdea" style="display:none">
+        <div class="content margin-top" >
+            &nbsp;&nbsp;<span class="bluetext">超轻量级</span> 没有违背核心的任何其他功能存在，小于99KB，绝不用担心引入一个大包袱，增加项目负担。</div>
+        <div class="content" >
+            &nbsp;&nbsp;<span class="bluetext">追寻性能</span> 各模块我都去琢磨，必要时方法绕过android的简单API而更贴近底层的实现。</div>
+        <div class="content" >
+            &nbsp;&nbsp;<span class="bluetext">依赖抽象</span> 这是面向对象思维的核心，对外提供接口而非实现，开发者可以非常方便的替换、拓展。</div>
+        <div class="content" >
+            &nbsp;&nbsp;<span class="bluetext">极致简约</span> 不需使用额外工具、多做其他事情来达到更佳体验，一切多余的，都不需要。</div>
+        <div class="content" >
+            &nbsp;&nbsp;<span class="bluetext">方法干练</span> 有灵活的API提供各种功能，也有一些直接承担某种特定使命的方法，但不会泛滥。</div>
+        <div class="content" >
+            &nbsp;&nbsp;<span class="bluetext">约定优于配置</span> 这是Lite系列的基线，用极少的描述，做更多的事情。</div>
+        <div class="content margin-top" >我认为每个细分的技术领域都应该至少有一款乃至几款小而美的库：<span class="bluetext">百花齐放、百家争鸣。</span></div>
+        <div class="content margin-top" >框架之间、不同功能模块之间应该依赖抽象而非实现，可快速的替换实现(库)，而不是强耦合或一锅烩(awful)，产品亦是如此，大而全的方向未必更佳，这一点恰恰是目前国产框架容易题发生的问题（但仍需感激它们以及作者辛辛苦苦为开发者提供的便利）。
+            <span class="orange" onclick="clickMyIdea(this)" >&nbsp;收起&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- crowdfunding -->
+    <div class="content margin-top">Lite初心即<span class="bluetext">开源免费</span>，如果我的项目有幸帮了你，你是否乐意帮我买个更短的域名或请一杯啤酒也好呢？
+        <a href="#myCrowdfunding">参与我的众筹</a  >
+    </div>
+
   <!-- project list -->
   <div class="title_h1">我的开源项目</div>
   <div class="divide_line"></div>
@@ -112,18 +160,21 @@
   <div class="content margin-top">我在Android社区发表的帖子 <a href="http://www.eoeandroid.com/thread-326584-1-1.html" target="_blank">LiteHttp：极简且智能的 android HTTP框架库</a>。 </div>
 
   <!-- 众筹 -->
-  <div class="title_h1">我的众筹(2014-8-5)</div>
+  <div name="myCrowdfunding" id="myCrowdfunding" class="title_h1 orangetext" >我的众筹(2014-8-5)</div>
   <div class="divide_line"></div>
-    <div class="content margin-top">如果我的项目有幸帮了你忙，你是否乐意帮我买个更短的域名或者一杯啤酒也好呢？</div>
+    <div class="content margin-top">如果我的项目有幸帮了你忙，你是否乐意帮我买个更短的域名或请一杯啤酒也好呢？</div>
+    <div class="content margin-top">如果你也信仰开放、平等、协作、分享的互联网精神，那我们是同道中人</div>
     <div class="content margin-top">如果你恰好有能力让更多的人知道Lite，一起来参与完善她，我将感到非常自豪并更加感谢你。</div>
     <div class="content margin-top">
         <a href="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank">点这参与众筹</a>
-        我的支付宝：imatianyu@qq.com </div>
+        我的支付宝：<span  class="orangetext"> imatianyu@qq.com </span>
+    </div>
     <div class="content margin-top">感谢以下众筹人慷慨解囊(可在付款说明中留下昵称+主页或者微博)：</div>
     <div class="content margin-top">
         <a href="http://weibo.com/lujing0818" target="_blank">Loading</a>,
         <a href="http://weibo.com/u/2529883221" target="_blank">ppoffice</a>,
         <a href="http://weibo.com/206665423" target="_blank">谭东jay</a>,
+        <a href="https://github.com/tim9liu9" target="_blank">老刘</a>,
         <a href="http://www.eoeandroid.com/space-uid-2561246.html" target="_blank">Material</a>...
     </div>
 </div>
