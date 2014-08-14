@@ -37,7 +37,8 @@
 	        document.getElementById("myIdea").style.display= "none";
 	    }
 	}
-	function clickApliay(obj){
+	function clickApliay(){
+	    var obj = document.getElementById("email");
 	    var outTxt = obj.value;
         obj.setSelectionRange(0,outTxt.length);
         obj.focus();
@@ -71,16 +72,16 @@
     </div>
     <div id="myIdea" style="display:none">
         <div class="content margin-top">
-            &nbsp;&nbsp;<span class="bluetext">超轻量级</span> 没有违背核心的任何其他功能存在，小于99KB，绝不用担心引入一个大包袱，增加项目负担。
+            &nbsp;&nbsp;<span class="bluetext">超轻量级</span> 无违背核心的任何其他功能存在，小于88KB，绝不用担心引入一个大包袱。
         </div>
         <div class="content">
-            &nbsp;&nbsp;<span class="bluetext">追寻性能</span> 各模块我都去琢磨，必要时方法绕过android的简单API而更贴近底层的实现。
+            &nbsp;&nbsp;<span class="bluetext">追寻性能</span> 各模块经过琢磨，必要时方法绕过android的简单API而更贴近底层的实现。
         </div>
         <div class="content">
-            &nbsp;&nbsp;<span class="bluetext">依赖抽象</span> 这是面向对象思维的核心，对外提供接口而非实现，开发者可以非常方便的替换、拓展。
+            &nbsp;&nbsp;<span class="bluetext">依赖抽象</span> 面向对象思维的核心，对外提供接口，开发者可以非常方便的替换、拓展实现。
         </div>
         <div class="content">
-            &nbsp;&nbsp;<span class="bluetext">极致简约</span> 不需使用额外工具、多做其他事情来达到更佳体验，一切多余的，都不需要。
+            &nbsp;&nbsp;<span class="bluetext">极致简约</span> 无需使用额外工具，无需额外Jar包，一切多余的，都不需要。
         </div>
         <div class="content">
             &nbsp;&nbsp;<span class="bluetext">方法干练</span> 有灵活的API提供各种功能，也有一些直接承担某种特定使命的方法，但不会泛滥。
@@ -189,15 +190,14 @@
     </div>
 
     <!-- 众筹 -->
-    <div name="cf" id="cf" class="title_h1 orangetext">我的众筹(2014-8-5)</div>
+    <div name="cf" id="cf" class="title_h1 greentext">我的众筹(2014-8-5)</div>
     <div class="divide_line"></div>
     <div class="content margin-top">如果我的项目有幸帮了你忙，你是否乐意帮我买个更短的域名或请一杯啤酒也好呢？</div>
     <div class="content margin-top">如果你也信仰开放、平等、协作、分享的互联网精神，那我们是同道中人</div>
     <div class="content margin-top">如果你恰好有能力让更多的人知道Lite，一起来参与完善她，我将感到非常自豪并更加感谢你。</div>
-    <div class="content margin-top">
+    <div class="content margin-top" onclick="clickApliay()">
         <a href="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank">点这参与众筹</a>
-        我的支付宝：<input type="text" readonly="true" value="imatianyu@qq.com" class="orangetext input-email"
-                     onclick="clickApliay(this)" />
+        我的支付宝：<input id="email" type="text" readonly="true" value="imatianyu@qq.com" class="greentext input-email" />
     </div>
     <div class="content margin-top">感谢以下众筹人慷慨解囊(可在付款说明中留下昵称+主页或者微博)：</div>
     <div class="content margin-top">
