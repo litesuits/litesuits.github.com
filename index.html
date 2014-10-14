@@ -42,6 +42,12 @@
         obj.setSelectionRange(0,outTxt.length);
         obj.focus();
 	}
+	function clickWeixin(){
+	    var obj = document.getElementById("weixin");
+	    var outTxt = obj.value;
+        obj.setSelectionRange(0,outTxt.length);
+        obj.focus();
+	}
 
     </script>
 </head>
@@ -185,6 +191,10 @@
     <div class="title_h1">关于我</div>
     <div class="divide_line"></div>
     <div class="content margin-top">马天宇，中国杭州，软件工程师。</div>
+    <div class="content margin-top" onclick="clickWeixin()">
+        我的微信：
+        <input id="weixin" type="text" readonly="true" value="vmatianyu" class="bluetext input-email"/>
+    </div>
     <div class="content margin-top">我的邮箱: <a href="mailto:imatianyu@qq.com">imatianyu@qq.com</a></div>
     <div class="content margin-top">我的博客：<a href="http://vmatianyu.cn" target="_blank">http://vmatianyu.cn</a></div>
 

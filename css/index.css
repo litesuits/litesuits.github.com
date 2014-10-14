@@ -93,8 +93,8 @@ body {
 	min-width:250px;
 	outline:none;
 	font-size:19px;
+	font-family:"Courier New", Courier, monospace;
 }
-
 .orange {
 	color: #f94b42;
 	text-decoration:none;
