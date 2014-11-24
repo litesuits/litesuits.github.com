@@ -6,17 +6,17 @@
             "descript": "语音报时，手电筒，极速解锁",
             "package": "cn.bong.xiaomi",
             "netVersion": "1.0.0",
-            "iconUrl": "http://bong.cn/share/app/ic_xiaomi.png",
-            "downUrl": "http://bong.cn/share/app/xiaomi1.0.0.apk"
+            "iconUrl": "http://litesuits.com/share/app/ic_xiaomi.png",
+            "downUrl": "http://litesuits.com/share/app/xiaomi1.0.0.apk"
         },
         {
             "appid": "1415683920468",
             "name": "Plusbong",
             "descript": "应用锁，手机锁屏，消息提醒",
             "package": "com.glzjin.plusbongsdk",
-            "netVersion": “1.5.9”,
-            "iconUrl": "http://bong.cn/share/app/ic_plusbong.png",
-            "downUrl": "http://bong.cn/share/app/plusbong1.5.9.apk"
+            "netVersion": "1.5.9",
+            "iconUrl": "http://litesuits.com/share/app/ic_plusbong.png",
+            "downUrl": "http://litesuits.com/share/app/plusbong1.5.9.apk"
         }
     ]
 }
