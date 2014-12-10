@@ -72,10 +72,39 @@ body {
 	margin-top:10px;
 	text-align: center;
 }
-.blue, a {
-	color: #0b758f;
+.bluetext {
+	color: #027fad;
 	text-decoration:none;
-	border-bottom:#0b758f dashed 1px;
+}
+.blue, a {
+	color: #027fad;
+	text-decoration:none;
+	border-bottom:#027fad dashed 1px;
+}
+.orangetext {
+	color: #f94b42;
+}
+.greentext {
+	color: #008573;
+}
+.input-email {
+    padding-left:5px;
+	border:0;
+	min-width:250px;
+	outline:none;
+	font-size:19px;
+	font-family:"Courier New", Courier, monospace;
+}
+.orange {
+	color: #f94b42;
+	text-decoration:none;
+	border-bottom:#f94b42 dashed 1px;
+}
+.orange:hover {
+	color: #f94b42;
+	text-decoration:none;
+	border-bottom:#f94b42 dashed 1px;
+	cursor:pointer;
 }
 .blue:hover, a:hover {
 	color: #f94b42;
