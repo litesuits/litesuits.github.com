@@ -129,3 +129,7 @@ body {
 	text-decoration:none;
 	border-bottom:#ffffff dashed 1px;
 }
+.text-mid-line {
+	color: #999999;
+	text-decoration:line-through;
+}
