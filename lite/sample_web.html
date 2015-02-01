@@ -6,7 +6,7 @@
     <title>Lite Webview Samples Page</title>
     <style>
         body{
-        width: 100%;
+        width: 90%;
         background: #fff;
         }
         .button{
@@ -77,6 +77,31 @@
         background: linear-gradient(top,#e4e8ec,#e4e8ec);
         }
 
+        .button.yellow{
+        border:1px solid #d2a000;
+        box-shadow: 0 1px 2px #fedd71 inset,0 -1px 0 #a38b39 inset,0 -2px 3px #fedd71 inset;
+        background: -webkit-linear-gradient(top,#fece34,#d8a605);
+        background: -moz-linear-gradient(top,#fece34,#d8a605);
+        background: linear-gradient(top,#fece34,#d8a605);
+        }
+        .yellow.round:after{
+        box-shadow:1px 0 1px rgba(255,255,255,.8) inset,1px 0 1px rgba(148,131,4,.9);
+        background:-webkit-linear-gradient(top,#cf9d00,#d2a000);
+        background:-moz-linear-gradient(top,#cf9d00,#d2a000);
+        background:linear-gradient(top,#cf9d00,#d2a000);
+        }
+        .yellow:hover{
+        background: -webkit-linear-gradient(top,#ffd859,#e3bb38);
+        background: -moz-linear-gradient(top,#ffd859,#e3bb38);
+        background: linear-gradient(top,#ffd859,#e3bb38);
+        }
+        .yellow:active{
+        top:1px;
+        box-shadow: 0 1px 3px #816b1f inset,0 3px 0 #fff;
+        background: -webkit-linear-gradient(top,#d3a203,#dba907);
+        background: -moz-linear-gradient(top,#d3a203,#dba907);
+        background: linear-gradient(top,#d3a203,#dba907);
+        }
     </style>
     <script>
         function move(to) {
@@ -113,10 +138,10 @@
 </head>
 <body>
 <div class="buttons">
-    <button type="button" class="button gray" onclick="goLeft()">左</button>
-    <button type="button" class="button gray" onclick="goTop()">上</button>
-    <button type="button" class="button gray" onclick="goRight()">右</button>
-    <button type="button" class="button gray" onclick="goBottom()">下</button>
+    <button type="button" class="button yellow" onclick="goLeft()">左</button>
+    <button type="button" class="button yellow" onclick="goTop()">上</button>
+    <button type="button" class="button yellow" onclick="goRight()">右</button>
+    <button type="button" class="button yellow" onclick="goBottom()">下</button>
 </div>
 <div id="content"></div>
 </body>
