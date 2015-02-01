@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lite Webview Samples Page</title>
+    <style>
+        body{
+        width: 100%;
+        background: #fff;
+        }
+        .button{
+        width: 20%;
+        line-height: 38px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        text-shadow:1px 1px 1px #333;
+        border-radius: 5px;
+        margin:0 10px 10px 0;
+        position: relative;
+        overflow: hidden;
+        }
+        .button:nth-child(6n){
+        margin-right: 0;
+        }
+        .button.gray{
+        color: #3e3e3e;
+        text-shadow:1px 1px 1px #fff;
+        border:1px solid #dce1e6;
+        box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+        background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+        background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+        background: linear-gradient(top,#f2f3f7,#e4e8ec);
+        }
+        .round,
+        .side,
+        .tags{
+        padding-right: 30px;
+        }
+        .round:after{
+        position: absolute;
+        display: inline-block;
+        content: "\003c";
+        top:50%;
+        right:10px;
+        margin-top: -10px;
+        width: 17px;
+        height: 20px;
+        padding-left: 3px;
+        line-height:18px;
+        font-size: 10px;
+        font-weight: normal;
+        border-radius: 10px;
+        text-shadow:-2px 0 1px #333;
+        -webkit-transform:rotate(-90deg);
+        -moz-transform:rotate(-90deg);
+        transform:rotate(-90deg);
+        }
+        .gray.round:after{
+        box-shadow:1px 0 1px rgba(255,255,255,1) inset,1px 0 1px rgba(0,0,0,.2);
+        background:-webkit-linear-gradient(top,#dce1e6,#dde2e7);
+        background:-moz-linear-gradient(top,#dce1e6,#dde2e7);
+        background:linear-gradient(top,#dce1e6,#dde2e7);
+        text-shadow:-2px 0 1px #fff;
+        }
+        .gray:hover{
+        background: -webkit-linear-gradient(top,#fefefe,#ebeced);
+        background: -moz-linear-gradient(top,#fefefe,#ebeced);
+        background: linear-gradient(top,#fefefe,#ebeced);
+        }
+        .gray:active{
+        top:1px;
+        box-shadow: 0 1px 3px #a8abae inset,0 3px 0 #fff;
+        background: -webkit-linear-gradient(top,#e4e8ec,#e4e8ec);
+        background: -moz-linear-gradient(top,#e4e8ec,#e4e8ec);
+        background: linear-gradient(top,#e4e8ec,#e4e8ec);
+        }
+
+    </style>
+    <script>
+        function move(to) {
+            var x=document.getElementById("content");
+            switch(to){
+                case 1:
+                    x.innerHTML +=  " 左";
+                break;
+                case 2:
+                    x.innerHTML += " 上";
+                break;
+                case 3:
+                    x.innerHTML += " 右";
+                break;
+                case 4:
+                    x.innerHTML += " 下";
+                break;
+            }
+        }
+
+        function goLeft() {
+            move(1);
+        }
+        function goTop() {
+            move(2);
+        }
+        function goRight() {
+            move(3);
+        }
+        function goBottom() {
+            move(4);
+        }
+    </script>
+</head>
+<body>
+<div class="buttons">
+    <button type="button" class="button gray" onclick="goLeft()">左</button>
+    <button type="button" class="button gray" onclick="goTop()">上</button>
+    <button type="button" class="button gray" onclick="goRight()">右</button>
+    <button type="button" class="button gray" onclick="goBottom()">下</button>
+</div>
+<div id="content"></div>
+</body>
+</html>
