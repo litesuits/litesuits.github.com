@@ -36,25 +36,12 @@
 	        document.getElementById("myIdea").style.display= "none";
 	    }
 	}
-	function clickApliay(){
-	    var obj = document.getElementById("email");
-	    var outTxt = obj.value;
-        obj.setSelectionRange(0,outTxt.length);
-        obj.focus();
-
-	    var aliUrl = "https://shenghuo.alipay.com/send/payment/fill.htm?optEmail=imatianyu@qq.com&title=thanks&memo=and%20love%20u";
-        window.open(aliUrl);
-	}
-	function clickWeixin(){
-	    var obj = document.getElementById("weixin");
+	function clickSelect(inputName){
+	    var obj = document.getElementById(inputName);
 	    var outTxt = obj.value;
         obj.setSelectionRange(0,outTxt.length);
         obj.focus();
 	}
-
-
-
-
     </script>
 </head>
 
@@ -223,11 +210,13 @@
         <a href="http://bong.cn?from=litesuits.com" target="_blank">bong</a>
         负责开放平台。
     </div>
-    <div class="content margin-top" onclick="clickWeixin()">
+    <div class="content margin-top" onclick="clickSelect('weixin')">
         我的微信：
         <input id="weixin" type="text" readonly="true" value="vmatianyu" class="bluetext input-email"/>
     </div>
-    <div class="content margin-top">点击加入QQ交流群: <a href="http://shang.qq.com/wpa/qunwpa?idkey=506ad3714349b779c07939ac865ac535195f3e887caf0ce9bbede4f003534f71" target="_blank" >42960650</a></div>
+    <div class="content margin-top" onclick="clickSelect('qqgroup')">点击加入QQ交流群:
+        <a href="http://shang.qq.com/wpa/qunwpa?idkey=506ad3714349b779c07939ac865ac535195f3e887caf0ce9bbede4f003534f71" target="_blank" >
+            42960650 </a></div>
     <div class="content margin-top">我的邮箱: <a href="mailto:imatianyu@qq.com">imatianyu@qq.com</a></div>
 
     <!-- about -->
@@ -247,23 +236,31 @@
         项目框架，框架的结构具体描述？</a>
     </div>
 
-    <!-- 众筹 &payAmount=50 -->
-    <div name="cf" id="cf" class="title_h1">打赏与捐赠(2014-8-5)</div>
+    <!-- 众筹 -->
+    <div name="cf" id="cf" class="title_h1">支持开源 乐于赞赏(2014-8-5)</div>
     <div class="divide_line"></div>
     <div class="content margin-top">感谢一路上朋友们的支持和鼓励，让我们一起努力做一些好东西。</div>
-    <div class="content margin-top" onclick="clickApliay()">
-        <a
-                href="https://shenghuo.alipay.com/send/payment/fill.htm?optEmail=imatianyu@qq.com&title=thanks&memo=and love u" target="_blank">点这捐助</a>
-        我的支付宝：<input id="email" type="text" readonly="true" value="imatianyu@qq.com" class="greentext input-email"/>
+    <div class="content margin-top" onclick="clickSelect('email')">
+
+        <form name="alipay_form" style="padding-bottom: 0;border:none;" method="post" action="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank" accept-charset="GBK" onsubmit="document.charset='gbk';">
+            <input type="hidden" name="optEmail" value="imatianyu@qq.com">
+            <input type="hidden" name="payAmount">
+            <input type="hidden" name="title" value="支持开源" />
+            <input type="hidden" name="memo" value="Thanks and love u" />
+            <label style="height:40px;vertical-align:middle;">点这打赏: </label>
+            <input type="image"  value="支持开源" style="vertical-align:middle;height:40px;width:115px"
+                   src="imgs/logo_alipay.png" name="pay" width="115px" height="40px">
+        </form>
     </div>
-    <div class="content margin-top">也可以使用微信、支付宝打赏：</div>
+    <!--<div class="content margin-top" onclick="clickSelect('email')">
+        我的支付宝：<input id="email" type="text" readonly="true" value="imatianyu@qq.com" class="greentext input-email"/>
+    </div>-->
+    <div class="content margin-top">也可以使用「微信」「支付宝」客户端 赞赏：</div>
     <div class="content margin-top">
         <img src="imgs/wxpay.jpg" alt="微信扫一扫打赏" height="200px" width="200px"/>
         <img src="imgs/alipay.jpg" alt="支付宝扫一扫打赏" height="200px" width="200px"  style="margin-left:50px"/>
     </div>
     <!--
-    <div class="content margin-top">如果我的项目帮到了你，来帮哥众筹送书香以表示勾搭呗~ come on！</div>
-    <div class="content margin-top">或者请我喝两杯表示也是极好的~ come on baby！</div>
     <div class="content margin-top" onclick="clickApliay()">
         <a href="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank">土豪点这捐助</a>
         我的支付宝：<input id="email" type="text" readonly="true" value="imatianyu@qq.com" class="greentext input-email"/>

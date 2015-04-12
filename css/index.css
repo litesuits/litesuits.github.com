@@ -76,6 +76,9 @@ body {
 	color: #027fad;
 	text-decoration:none;
 }
+.border_bottom {
+	border-bottom:#027fad dashed 1px;
+}
 .blue, a {
 	color: #027fad;
 	text-decoration:none;
