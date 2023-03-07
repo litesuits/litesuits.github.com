@@ -1,17 +1,17 @@
 body {
 	padding: 0px;
 	margin: 0px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:"Courier New", Courier, monospace;
 }
 /* 整体结构 */
 #head {
 	width: 100%;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color: #f7931e;
+	background-color: #302D2D;
 }
 #main {
-	width: 75%;
+	width: 70%;
 	min-height: 500px;
 	margin: auto;
 }
@@ -19,7 +19,7 @@ body {
 	margin-top: 50px;
 	width: 100%;
 	height: auto;
-	background-color: #f67828;
+	background-color: #302D2D;
 }
 /* 主副标题 */
 #nav_title {
@@ -34,7 +34,6 @@ body {
 /* 大标题 */
 .title_h1 {
 	margin-top: 45px;
-	margin-bottom: 5px;
 	font-size: 25px;
 	color: #000;
 }
@@ -42,7 +41,7 @@ body {
 .divide_line {
 	width: 100%;
 	height: 1px;
-	background: #f67828;
+	background: #999;
 }
 /* 小标题和内容 */
 .title_h2 {
@@ -66,11 +65,11 @@ body {
 	font-size: 13px;
 	color: #fff;
 	text-align: center;
-	height: 50px;
-	line-height: 50px;
+	height: 40px;
+	line-height: 40px;
 }
 .footer_static{
-	margin-top:1px;
+	margin-top:10px;
 	text-align: center;
 }
 .bluetext {
